@@ -1,0 +1,18 @@
+190319 Minutes:
+1. Coding Status
+    -Minh and Jason got a Card, DiscardPile, and Hand class done, but testing 
+    was in main() methods
+    -Faiz and George struggled with writing the main Controller or Json Parser
+    class and got some running code for the MainMenuView
+    
+2. Code tooling
+    -Several people had problems with getting JUnit installed, so Donovan helped
+    them get it set up
+    -No discussion on using things like Maven, though libraries are getting put
+    in different places for different people, so that might need to happen later
+
+3. Design
+    -Georgi and Donovan decided that the Json parser can stay as outputting a
+    map instead of a list of pairs
+    -They also decided that the Display will construct and destroy view panels
+    as they change throughout the client's lifetime

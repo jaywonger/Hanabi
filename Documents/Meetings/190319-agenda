@@ -1,0 +1,11 @@
+1. Coding work
+    -Status reports on what code has been written and how the pair programming went
+    -Declare what further coding will get done, and by whom?
+2. Code tooling
+    -Is anyone having trouble using JUnit5 (or AspectJ if you're that far)?
+        -If you are, ask for help in setting it up and using it
+    -How do we handle using multiple IDEs on the project?
+        -A build system like Maven could help, but we all have to use it and commit to it
+        -We could all commit IDE files with build info, but care must be taken
+3. Design
+    -After trying to write some code, are there suggestions for design changes?

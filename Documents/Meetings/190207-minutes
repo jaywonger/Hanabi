@@ -1,0 +1,49 @@
+Agenda Feedback
+1. seems ok from before (improvement from the first couple of weeks)
+2. leave the status for thursday meetings
+3. discuss points among ourselves on the tuesdays meetings
+4. do more gitlab commits for the entire group
+
+Design
+- create multiple branches for each group member
+- merge with master branch to see if it is functional
+1. development
+2. merging 
+3. testing 
+    - test cases (script)
+    
+Documentation
+- have a document on who is doing what for future purposes
+- google docs
+    - have each member upload their own part onto the repo
+    - everyone has access so it is easier for people to not overlap
+- everyone is responsible for their own work so people can refine
+- examples (latex, microsoft online)
+
+Design Architecture
+- model-view-controller is the way to go for the time being
+- UI view 
+    - hub that controls the rest of the sub-classes
+- cookies (front-end)
+    - connected to the game state manager
+    - as we go kind of thing
+
+Start some client side programming in the mean time!
+
+-------------------------------------------------------------------------------
+
+Group meeting follow up:
+
+Time management
+1. Refine the writing on each persons part
+2. Group in pairs/work sessions
+3. Lower the amounts of rewrite in the documents
+4. More descriptive on each parts
+5. Constructive criticism (communicate with each other)
+
+Programming
+- Minh: pseudo code AI (since we have an idea of what it needs to do)
+
+Working sessions
+- The idea is to meet up together -> motivation and ideas rightaway
+- After our meetings on Tuesday/Thursday

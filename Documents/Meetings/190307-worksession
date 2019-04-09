@@ -1,0 +1,15 @@
+1. Wrote up coding convention document
+    - following googles coding covention for java
+    - check document for changes 
+
+2. create a directory for coding covention
+
+3. Test plan document
+- Unit test on their own, each classes have main to test their methods
+- Integration test: testing of how the classes work together. Divided up in a 
+                packages. Following closely with the use cases.
+- End-to-end (system) test: the whole system, bulky test. Going through the
+                whole uses cases. Game running
+- Only 5 paragraphs with 3 above + introduction, conclusion
+
+

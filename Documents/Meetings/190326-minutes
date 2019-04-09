@@ -1,0 +1,23 @@
+Minutes for Mar.26
+- Everyone provided updates on what they've done since sat
+    - AI Controller was worked upon but needs clarification
+    - Hanabi Game was worked upon but other model classes need to be modified before Hanabi Game can be finished
+    - Server Comm was worked upon and a better echo server was created to help in testing
+        - just need to test the receiving messages
+    - Decided to use Java Fx for the view and can now start work on that
+    
+- Decided on the next work session
+    - tentatively scheduled for thursday after meeting at 1, saturday at 11 am, and maybe sunday
+    - Thursday Pair programming
+        - Donovan and Georgi
+
+- Minh showed up late
+
+- Documentation process needs to be better
+    - provide documentation on bugs found on committed code
+        - also for things we can improve e.g. enums instead of primitive types
+    - needs to be done through the issues tab on gitlab
+    
+- Determined Java FX dependency and whether it was needed during runtime or as a whole library
+
+- Decided to use enums in the model classes

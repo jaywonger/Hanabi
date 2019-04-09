@@ -1,0 +1,29 @@
+Agenda for jan 29 meeting of group F1
+
+1. To check over what we have done for assignment 1
+   a. each group member can proof read each members section
+   b. ask questions if anyone does not understand anything or needs help with
+   c. a checkpoint on where we are at for our sections
+
+2. Discuss the external interface requirements portion of Assignment 1 
+    a. Decide exactly how to split up that portion of the requiremnts document
+    b. If any other requirements are needed for that portion according to the template
+        
+3. Discuss the glossary for the requirements document
+    a. Proposal: A standard set of terms should be defined in the document to avoid ambiguity
+        i. these terms include:
+            GUI
+            User
+            Player
+            Main screen
+            system
+            Any others that the members find are necessary
+
+4. Discuss the computer player portion of the project
+    a. Is it an external player or does it only come into play when a human player can't move?
+
+5. Discuss the game state action
+    a. It is too vague
+    b. Discuss the proposal that all system features should have a portion that updates the game state
+
+6. Check up on what else needs to be done for Assignment 1

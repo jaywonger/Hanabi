@@ -1,0 +1,27 @@
+25 minutes (1-125pm)
+- TA introduced himself
+- TA does not mark the project (just oversees it)
+
+Notes
+- Prof wants each person to have stuff to do for the project
+- think of it as a proposal
+    - 
+- things can be changed later based on what the requirements are
+
+
+Game design notes
+- basic game core
+    - ai application
+- need chat application
+- graphics interface
+
+Hanabi Game Notes
+- cannot say both information 
+    - either the number or the colour
+    - can point at the cards
+END of meeting with TA
+
+130-140pm
+- full group meeting own time
+    - discuss our assets/liabilities
+    - play the game at a future time

@@ -1,0 +1,14 @@
+Feb 26th Meeting Minutes:
+- Donavan is mostly done with his work.
+    * Discussing using HTML for GUI designs and its implementation with Java.
+            - Would any issues arrise from connecting java on client side with HTML.
+            - Would default browser be promped for the application.
+    * Handling Receiving and Sending Information to server from Client.
+        - Quering data depending on state of game.
+- Georgi is behind on work.
+    * TODO: Describe HTML components and their connection to the Java classes/interfaces. 
+- Jason is working on UMLs.
+    * We decided to use UMLET and umlet/umletino for macUsers
+- Minh is working towards completing class descriptions and interfaces.
+- Faiz and Sharjeel are finishing CRC cards and class diagrams.
+    

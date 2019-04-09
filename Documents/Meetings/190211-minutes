@@ -1,0 +1,46 @@
+Architecture
+- justify why chose MVC
+    - controller:
+        - event based driven
+        
+Model
+- objects (data structures)
+    - game ID (1)
+    - game token (1)
+    - max number of players (2-5)
+    - current number of players (1-5)
+    - info tokens (0-8)
+    - fuse tokens (0-3)
+    - player hands (2-5)
+        - cards (4-5)
+            - colour/number (1/1)
+    - fireworks pile (5-6)
+        - height(the piles highest number)  (0-5)
+    - discard pile (0-deck size)
+    - log
+    
+View
+- check state diagram
+
+Controller
+- operations (use-cases) (actions)
+    - on model
+        - enter game 
+        - add player
+        - remove player
+        - leave game
+        - start game
+        - apply/move
+            - play card
+            - discard
+            - give info
+        - view discard on/off
+        - view log on/off
+        - leave game (mid-game)
+        
+    - on server
+        - create game
+        - join game
+        
+Design doc needs to be detailed on the MVC/event-based for controller
+

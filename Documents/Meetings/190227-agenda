@@ -1,0 +1,33 @@
+Feb 27 Meeting Agenda
+
+1. Figure out a GUI since our previous idea is invalid
+    - Guess we're making lots of view classes now; welp!
+    - Which library or framework should we use?
+    - Will it impose constraints on our class design?
+
+2. Sort out the detailed design problems
+    - sort out the GUI with the detailed design
+    - go over the UML in detail
+    - See if patterns like Singleton, Command, and Factory can be used
+        - "Click button; thing happens" is a good candidate for Command
+        - Ensure that only one display exists -> Singleton
+        - Have Factories generate cards or other things?
+    - Make sure that standalone AI Players are accounted for
+
+3. AI Algorithm and Architecture
+    - Minh was supposed to do this stuff but hasn't
+    -What is the AI architecture?
+    -How exactly does it make moves?
+
+4. Add state machine tracking to our model
+    - Donovan asked the prof about how to handle screen states; response was to
+    either use variables in the model to track the state of the view (see View 
+    State Diagram) and human move making in game, or to handle small scale state
+    changes (ex. Play vs Discard prompt) in the view, and which one we use is
+    up to engineering judgement
+
+5. Work Timeline
+    - When exactly will people work on stuff and have it done?
+        - 'Eventually' or 'on the weekend' isn't good enough anymore, because
+        people keep forgetting to do stuff or doing a poor job and Donovan ends
+        up doing it instead, and that is awfully close to happening again.

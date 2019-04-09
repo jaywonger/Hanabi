@@ -1,0 +1,35 @@
+Design Documentation
+- high level to low level
+
+Model-View-Controller
+- Server
+- Game State Manager(Model)
+    - updates the game
+    - sends and receive messages (JSON)
+    - needs to know amount of tokens/fuses
+    - keeps track of what can/cannot be played
+    - notify log what has been done
+- UI Controller
+    - sends/recieves info from the view
+    - if max tokens(etc...) 
+- Menu Controller
+    - handles creating/joining games
+    - manages input info (keyboard/mouse inputs)
+    - error checking (ex. wrong card choosen)
+- UI View
+    - update view accordingly
+
+    
+Objects
+- Player
+    - AI
+        - add in lobby, in cmd line
+        - active when afk (completes turn for afk player)
+- Card
+    - suits etc extends card
+- Logs
+
+
+- Game Login/Loggout
+
+ASK -o TA for help on this

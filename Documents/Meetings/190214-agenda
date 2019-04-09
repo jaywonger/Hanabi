@@ -1,0 +1,12 @@
+1. Go over our architecture choices with the T.A
+    a. make sure we have the right idea in terms of the architecture we have 
+    chosen for our MVC
+
+2. Raise some possible requirements changes based on Posted Server JSON specs
+    a. Maximum time-out period of 120 seconds
+    b. Players leaving in lobby != kill game
+    c. Force Create Game: Might be from Create Game menu and not from lobby?
+
+3. Delegate tasks to group memebers (figure out who is doing what) 
+
+4. Ask last minute midterm questions to the T.A 

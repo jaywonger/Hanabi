@@ -1,0 +1,15 @@
+Notes on our state diagram: 
+- force create game 
+- change "exit game" to something more descriptive 
+
+change to req: 
+    - make an option (button) on the cerate game screen to exit vs add to the use case  
+    - if a player leaves in the lobby it should not kill the game, it should wait for another player to join (empty out a slot)
+- text size 9-11 
+
+Delegate Tasks: 
+- Low level class diagrams (faiz, shar, jason) 
+- Architecure (donovan/Minh) 
+- write up on model and its components (Minh/George) 
+
+    

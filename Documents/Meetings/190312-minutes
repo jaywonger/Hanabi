@@ -1,0 +1,9 @@
+1. Went over integration test cases
+    - 1 case for each section
+    
+2. Unit testing
+    - make HanabiGame more extensive 
+        - covers playCard(), discardCard(), giveInfo() methods
+        
+3. Pair Programming
+    - use our tuesday meeting time to do pair programming

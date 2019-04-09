@@ -1,0 +1,18 @@
+Feb 26th Meeting Agenda
+
+1. Status reports on Design Document work
+    -Minh and Donovan's work on architecture writeup
+    -Faiz, Sharjeel, and Jason's work on CRC cards and class diagrams
+    -Georgi's ... whatever he's doing (architecture as well?)
+
+2. Check on Architecture-Class correspondance
+    -Make sure that the detailed classes agree with what we've agreed upon for
+    the architecture
+
+3. Discussion of Classes
+    -Look over the developed classes as a group and see if any obvious improvements
+    can be made with design patterns we've learned
+
+4. Detailed Design writeup
+    -Who's going to make the final UML class diagram(s)?
+    -Who's going to write class descriptions and interfaces?

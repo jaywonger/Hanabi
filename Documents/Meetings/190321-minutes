@@ -1,0 +1,31 @@
+1. meet up saturday figure out what needs to be done 
+
+
+2. make changes only on the last document (project doc)
+    - dutchyn marking the project
+    
+3. maven shit
+    - JUnit 5
+    - GSON library
+
+Meet up saturday everyone 10am
+- work on view/controller mainly
+
+sunday whoever can make it
+
+
+Tasks
+Model (Log, FireworksPile, ActionListener, ...)
+- Minh
+
+Changes to Design
+- Added AIPlayer to Model to lessen HanabiGame 
+- HanabiGame will be a communicator with AIController to get the moves
+- check repo for uploaded code under modelWorks branch
+
+FireworksPile 
+- add getNumberOfCards in a pile method
+    - public int getSize()
+    
+Card
+- add Equals() method

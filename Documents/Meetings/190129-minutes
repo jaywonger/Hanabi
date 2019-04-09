@@ -1,0 +1,53 @@
+Status for assignment 1
+
+1. introduction is basically complete (minor changes based on use cases)
+2. planned functionality (minor changes based on uses cases)
+3. software and hardware requirements basically done
+4. Use cases (what else needs to be changed or updated)
+    - if someone is afk do what?
+        - certain player afks x time period 
+        - computer takes over
+            - discards a card if there are less than 8 information tokens
+            - else play a card
+                - store information and parse information to figure out which card it play
+    
+    GUI
+    - need to make those (ie skeleton of what it should look like)
+    
+    Actors/Action
+    - Server: actor
+        - Action
+            - starts game
+            - end game
+                - prompt of a score (ok button)
+                - goes back to main menu after ok button is pressed
+            - join game
+    - Player: actor
+        - Action
+            - leave game
+            - play a card
+            - discard a card
+            - give information
+    - Computer: actor
+        - Action
+            - play a card
+            - discard a card
+            - give information
+            
+    Features
+    - discard pile of cards to view
+    - log for the player to view 
+    - token control
+    - response time (2 seconds for game updates)
+    - 10 minute waiting period for players to join a game 
+    - 3 seconds to see what each player cards are
+    - game ends if player disconnects
+    
+5. non functional requirements
+    - availablity requirements
+    - discussion of how specific the non functional stuff are
+        - how long use cases will be 
+        - how long it takes to play a card (60 seconds?)
+            - program decides what to do if the player is afk?
+            
+            

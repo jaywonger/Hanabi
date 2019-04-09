@@ -1,0 +1,31 @@
+1. Coding convention: coding style that the
+the group will follow when it comes to 
+coding time.
+    1.2 private before public order when you
+    declare classes. Also applicable for fields
+    and variables
+    
+    Always use braces
+    Line wrapping: 4 spaces
+    Indentation: 2 spaces/no tab
+    Lexical: follow google's convention
+    A blank line between methods, constructor, ...
+    Comments: use /* with big block of comments,
+            and use // for in-line
+    Mention wherever the throw, exception happens
+    
+2. Continue to use google docs for documents
+    - look into branches possibly for coding
+    - be more diligent about commits
+    
+Decision: 
+- We decided that we will follow closely with the
+Google's coding convention. Our document will refer
+to it closely and mentioning what we do diffrently
+- Thursday we will have a work session to finish
+coding convention and start on test cases.
+- Decide on how we break the test case
+
+Work:
+- Minh: google doc file for coding convention
+Link: will be updated here and Slack

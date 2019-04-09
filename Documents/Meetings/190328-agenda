@@ -1,0 +1,14 @@
+1. Status update
+    a) how is the model coming along?
+    b) how is the view and learning javaFX going?
+    c) how is the controller class coming along?
+    d) Declare any design changes you've made
+
+2. Discuss any particular issues: 
+    a) how to test the state of HanabiGame() with no access to private fields 
+    and no getter/setters
+
+3. Find out who, if anyone, still needs to do pair programming
+    a) Currently known sessions are Georgi/Donovan today only
+
+4. Schedule another worksession

@@ -1,0 +1,35 @@
+Minh is sick (will check minutes on this own time)
+
+TA has a question how 2 players would work if they have the same interface
+- player 1 cannot see his own cards and can see player 2's cards
+- vice versa for player 2
+
+Connecting to server 
+- create and join are separate
+- join via game id and token
+- keep information on player name (NSID)
+- player can join a game running at any time?
+    - how does a new player join?
+        - does this player take over a computer?
+        - reallocates a new player into the game?
+- all computer players
+- joining the server (NSID)
+- joining a game (id, secret)
+
+GUI uploaded on repo
+- game gui just lessen the players 
+- make some changes to UI
+- George basically handles UI (no clue about what is going on)
+- joining a game
+    - game menu
+    - lobby
+- toggle for logs and discard pile
+- toggle the cards and select either play, discard, give information 
+
+Game State
+- runs clockwise or counterclockwise
+
+Future Considerations
+- sounds etc...
+
+

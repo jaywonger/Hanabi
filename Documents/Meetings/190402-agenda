@@ -1,0 +1,22 @@
+Agenda for meeting of Apr.02 2019
+
+1. Provide update on what has been done so far
+
+2. Can we finish this?
+    -Georgi's still been trying to make a GUI, and this is the end for him. If
+    doesn't have a partially working (i.e. connected to other bits) GUI by this
+    meeting, we have to move on to a console app.
+        -You're out of chances Georgi. Accept defeat. You were overconfidant.
+    
+3. Discuss final report
+    -Someone's gotta start doing some writing for the final report, including 
+    drafting up user documentation, compiling all of the changes from the 
+    requirements and original design, justifying our absolute crap work, etc.
+    -User Docs can be written up but will eventually need screenshots of any 
+    working client we produce
+    -We need to confirm how we will distribute our (working?) client
+    -We need to ensure that EVERYTHING in the main code has Javadoc, because
+    that is a requirement (via a link to index.html in our repo)
+    -The design changes will require new Class diagrams and desciprtions of new
+    classes made to shift or split responsibilities
+    -Among other things...

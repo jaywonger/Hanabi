@@ -1,0 +1,15 @@
+Minutes for Apr.02
+
+1. Provided updates on what has been done so far
+    a) Model just needs to add the list of observers and and clear the game id and token at the end of the game
+    b) Controller still needs implementation and will hopefully be done today
+    c) Will experiment with the view further today, if cannot figure it out will switch to console
+    
+2. Went over the final report briefly and discussed changes done so far and any other requirements needed for the document 
+
+4. Discussed the deadline for the project and if it is feasible or not
+    a) it is if the use of aspects is scrapped and continue with the console app.
+    
+5. Changed the format of the map sent from the control to the view of state change: 
+    examples: "P1Hand" -> "cards", "fireRed" -> "cards", "tokenInfo" -> 4
+    - will have a standardized format of strings once code is finished.

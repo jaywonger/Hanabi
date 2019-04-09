@@ -1,0 +1,23 @@
+Update on what needs to be done
+
+1. Faiz and Jason 
+    - pair programming
+    - worked on the HanabiGame in the model package
+        - built the addPlayer()
+        - built the removePlayer()
+        - built the endGame()
+        - partially built startGame()
+        - partially built enterGame()
+        
+
+2. George and Sharjeel
+    - pair programming
+    - worked on the view
+    
+3. Minh and Donovan
+    - pair programming
+    - ServerComm's connect(), disconnect() method were implemented
+    - a mock server was created and a test to test the connection 
+    were implemented
+    - Donovan helped Minh in setting up Git right and files in proper places
+    

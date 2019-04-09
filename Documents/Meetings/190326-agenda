@@ -1,0 +1,31 @@
+1. Status update on solo code work and declare upcoming work
+
+2. Comitting regularily
+    -People aren't comitting work until they are completely done. That is not 
+    how commits should work and we should be in the same page
+        -You commit when some small amount of work (like a method or 2 or some 
+        tests) has been done and the code doesn't crash, not when a significant
+        chunk (like a big class) has been done
+        -This matters for the purpose of fiding and fixing bugs like a 
+        compilation error that Faiz got on Saturday
+
+3. View Work
+    -This is behind and we should seriously consider scaling down the visual 
+    expectations of the GUI
+    -Pick Swing or JavaFX and STICK TO IT; stop flip-floping between them
+
+4. Documentation and Process
+    -You are all really bad at documenting your code
+        -Class headers, method headers, significant implmentation comments, 
+        etc. all need to be included regardless of size
+    -We need to put more effort into process documentation
+        -This includes more detailed meeting minutes, more commits of smaller 
+        chunks, using Issues in Gitlab to document our debugging of committed 
+        code, among other things
+        -Our process matters more than our having a working product. This 
+        should not be news.
+
+5. Pair Programming
+    -Some people still need a pair session, so those need to be scheduled
+    -Remember that the submissions are individual; document the basics of the 
+    session in the repository, but don't put up your report

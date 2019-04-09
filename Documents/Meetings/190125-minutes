@@ -1,0 +1,44 @@
+Went over what we need to do for assignment 1
+
+
+INTRO
+Jason
+
+OVERALL DESCRIPTION
+Minh/Jason
+
+EXTERNAL INTERFACE REQUIREMENTS
+Connection - Minh/Donovan/George
+GUI - Faiz/Shar/Jason
+
+SYSTEM FEATURES (CONSIDERATION FOR A GOOD SRS)
+Faiz/Shar/Donovan
+   - Actors:
+	- Players
+	   - connect to server
+	   - start a game
+	   - play a card
+	   - discard a card
+		- earn a token
+	   - give information
+		- no more tokens cannot give information
+	   - chat sending (human based)
+	   - * player disconnects, game ends
+	- Server
+	   - card deals
+	   - token control
+	   - fuse
+	   - game state (win/lose/playing)
+		- who's turn it is
+		- player status (who's turn it is)
+	   - chat communication
+	- Computer Player
+	   - refer to player
+		- minus chat
+
+
+OTHER NONFUNCTIONAL REQUIREMENTS
+George
+
+OTHER REQUIREMENTS (APPENDICES)
+everyone

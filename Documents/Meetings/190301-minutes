@@ -1,0 +1,14 @@
+1. Made a schedule directory for who is doing what for the week and when it is due
+Constructive feedback on how to fix future problems/assignments to repo
+    - put expectations to update the assignment
+    - DM/ask group about problems if one does not know
+    - 
+    
+2. updated the UML class diagram
+    - figured out what happens with the "log" class
+        - using a "log collection"
+    - figured out how the players are stored
+        - ex. as a list and just run through the list in numerical order
+    
+3. split up who is doing what for the descriptions
+    - check schedule for split work

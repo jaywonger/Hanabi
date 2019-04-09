@@ -1,0 +1,37 @@
+How moves are made?
+Faiz, Shar: Hanabi class that contains everything.
+A move is player.discard() method
+
+Idea:
+- Have a discard a card class
+- Having Hanabi game class as controller
+- The Hospital system connects GUI and Model through Controller layer
+    +, This can be the Hanabi class
+    +, 
+ie: How do we transfer a card from hand to the firework pile
+
+Donovan: If everything in one window, Model should have a state variable, 
+and another variable for the state.
+- Remove canvas in a JFrame to replace with new one.
+-> If you go back to main menu then JPanel for menu will replace
+
+AI standalone:
+- finite state with if/else
+- How to give info for AI?
+- Combine with pipe and filter
+
+
+Tasks:
+Donovan -> AI architecture, Algorithm
+Georgi -> GUI classes
+Description is done after UML split between everyone
+
+
+
+Brainstorm ideas of how MVC connects together and ask prof 
+tomorrow. 
+Time to meet prof: 
+- Default: 11:30am
+- Depends on email to prof
+
+More meeting will be decided after Thursday

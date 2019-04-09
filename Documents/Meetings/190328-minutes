@@ -1,0 +1,32 @@
+Minutes for mar. 28
+1. Updates on what has been done
+-Abstract container and subsequent container classes wer updated
+-Server Comm is finished
+-Tried and failed to get FX working and generally Having issues with project 
+view
+
+2. Design Changes
+-Controller package
+    -possibly split Hanabi Controller into two classes
+        -one takes action from the view
+        -the other takes action from the server
+-Model: 
+    -make a HanabiGame interface, this should make testing the controller 
+    easier because we can make a mock HanabiGame. HanabiGame class should also 
+    implement this interface.
+    -AI controller has been shifted to AI player in model (even though this was
+    known and documented earlier)
+    -playCard:
+        -added index into which pile should be updated
+-View:
+    -Scrap the GUI; we're doing a console application now  since the GUI isn't
+    working out
+
+3. Worksessions
+-Friday: 2:30 - 5:30 in either Thorv 358 or (if taken) Eng Library
+-Saturday: 11:00 to 5:00 in Spinks S371
+-Sunday: 11:00 to 2:00 in Spinks 371
+
+4. Remaining pair programming
+-Just Donovan and Georgi today from 1:30 at earliest
+    -Working on finishing AIPlayer methods

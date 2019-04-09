@@ -1,0 +1,16 @@
+1. Claification question
+    - make an entire new document
+    - copy the original coding covention document
+        - with minor changes
+        
+2. Test plan
+    - use JUnit or no?
+
+    - english document
+    1. introduction
+    2. end-to-end tests
+    3. integration tests
+    4. unit tests
+    5. summary
+    
+3. Experiment on AspectJ

@@ -1,0 +1,12 @@
+1. Figure out where we are for the view
+    - how to connect view to controller
+    - aspectJ
+
+2. Controller what else needs to be done?
+    - 
+
+3. Model is done without rainbow cards
+    - communication problem with enterGame()
+        - redesigned
+    - no rainbow cards for the demo
+    - rainbow cards for the submission next week?
