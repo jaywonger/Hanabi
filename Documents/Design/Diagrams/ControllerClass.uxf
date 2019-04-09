@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>10</y>
+      <w>470</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>HanabiController
+Package::Controller
+--
+-game: HanabiGame
+-gameID: Int
+-token: String
+-nsid: String
+-isAI: Bool
+-server: ServerComm
+--
++createGame(numPlayers: Int, timeout: Int, nsid: String, force: Bool): void
++joinGame(id: Int, token: String, nsid: String): void
++leaveGame(): void
++addAIPlayer(): void
++tellPlayCard(handIndex: Int): void
++tellDiscardCard(handIndex: Int): void
++tellGiveInfo(playerIndex: Int, property: String): void
++tellToggleDiscard(): void
++tellToggleLog(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>360</y>
+      <w>460</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ServerComm
+Package::Controller
+--
+--
++connect(): void
++disconnect(): void
++sendCreate(numPlayers: Int, timeout: Int, nsid: String, force: Bool): void
++sendJoin(id: Int, token: String, nsid: String): void
++sendPlay(handIndex: Int):  void
++sendDiscard(handIndex: Int): void
++sendInfo(playerIndex: Int, property: String): void
++receiveMessage(): String[*], String[*]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>290</y>
+      <w>230</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;30.0;210.0;30.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>580</y>
+      <w>340</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>JSONParser
+Package::Controller
+--
+--
++makeJSON(name: String[*], value: String[*]): String
++parseJSON(message: String): String[*], String[*]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>530</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>150</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>valign=center
+HanabiGame
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>150</y>
+      <w>210</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>360</y>
+      <w>500</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>AIController
+Package::Controller
+--
+--
++getMove(game: HanabiGame): String[2], Int
+-bestMove(play: Int[2], discard: Int[2], info: Int[2], String): String[2], Int
+-bestPlay(handAI: Card[4..5], fireworks: Card[0..5, 6]): Int[2]
+-bestDiscard(handAI: Card[4..5], fireworks: Card[0..5, 6], discard: Card[*]): Int[2]
+-bestInfo(handPlayers: Card[4..5, 1..4], fireworks: Card[0..5, 6]): Int[2], String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>290</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;</panel_attributes>
+    <additional_attributes>200.0;70.0;200.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>210</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>valign=center
+Card
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>220</y>
+      <w>60</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>170</y>
+      <w>80</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;190.0</additional_attributes>
+  </element>
+</diagram>

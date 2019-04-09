@@ -1,0 +1,28 @@
+Coming up with the test plan for the end-to-end, unit test and integration test.
+
+Go top to bottom
+    1. end-to-end - use cases
+    2. integration - architecture (MVC)
+    3. unit - classes
+
+View: Georgi
+Model: Minh/Sharjeel/Faiz/Jason
+Controller: Donovan/Georgi + whoever finish their part 
+
+Google Drive link: https://docs.google.com/document/d/1oE_jDHQXf3yQuRVDhTOB__GIKcoinGAK6Mv-CoWsD0g/edit?usp=sharing
+
+
+March 10, 2019
+- What we did
+Donovan, Minh and Jason wrote up the intro, end-to-end testing portion.
+
+- What needs to be done
+** Faiz, Shar and Georgi **
+- determine what types of tests need to be done for integration testing
+    - write up as point form for easier view
+    - convert to paragraphs after
+- convert the rest of unit testing into paragraphs 
+    - currently in point form
+
+
+Due date: Tuesday meeting - March 11st, 2019

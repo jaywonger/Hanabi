@@ -1,0 +1,24 @@
+- Sharjeel / Faiz / Georgi - All Integration test into paragraphs
+- Jason - Unit Testing: Model part
+- Georgi - Unit Testing: View part
+- Minh - Unit Testing: Controller part
+- Donovan - End-to-end Tesing
+
+Due date: Tuesday, March 12 before our meeting
+
+On Tuesday:
+- General paragraphs for each section, what we test and what we don't test
+
+Link to Google Drive file:
+https://docs.google.com/document/d/1oE_jDHQXf3yQuRVDhTOB__GIKcoinGAK6Mv-CoWsD0g/edit#
+
+!!!Note:
+- For the Integration Test, we have included a skeleton of test cases that we
+want to have. If you guys want to add/remove anything, let's discuss on Slack 
+first.
+- If possible, always try to refer to the requirement and design document
+- General format
+    - what we testing
+    - how it is at the start
+    - a series of what you do with what exact inputs, states (make up value if
+    needed) and what to expect

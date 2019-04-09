@@ -1,0 +1,157 @@
+*** Packages *** 
+Model:
+    Entities(subpackage of model):
+    - Card: 
+        - Resp: 
+            - hold Rank 
+            - hold Color
+        - Collab:
+        
+    - Player 
+        - Resp: 
+            - store name (NSID)
+            - store the players hand collection
+        - Collab: 
+            - Hand 
+        
+    - Log 
+        - Resp: 
+            - store moves (with player responsible)
+            - player name 
+        - Collab: 
+            - Card
+            - Player
+
+    -Containers(abstract class):
+        - Resp: 
+            - store objects 
+            - add objects
+            - remove objects
+            - clear objects
+            - keep track of objects
+        
+        (Sub classes) 
+        - Hand
+            Resp:
+                - store cards
+                - add cards
+                - remove cards    
+        - Collab: 
+            Card
+                
+        - DiscardPile
+            Resp:
+                - add cards
+                - clear cards
+           - Collab: 
+            Card
+            
+        - FireworksPile 
+            Resp:
+                - add cards
+                - clear cards
+            - Collab: 
+                Card
+                
+        - infoTokens 
+        Resp: 
+            - store num info tokens 
+            - add tokens
+            - remove tokens
+        Collab: 
+        
+        - fuseTokens 
+        Resp: 
+            - store num fuse tokens 
+            - add tokens
+            - remove tokens
+        Collab: 
+            
+        - logcollection
+            Resp:
+                - store log objects
+                - add log objects
+            Collab:
+                - Log objects
+                
+    HanabiGame
+        Resp:
+            - create and store log object into logcollection after move is made
+            - PlayCard 
+            - DiscardCard
+            - Giveinfo
+            - exitGame
+            - keep track of tokens
+            - keep track of players
+            - keep track of player's hands
+            
+        collab:
+            - logcollection
+            - Player
+            - FireworksPile
+            - DiscardPile
+            - Card
+            - infotokens
+            - fusetokens
+            - Hanabi controller
+            
+View: 
+- Screens 1-6
+
+Controller:
+- HanabiController
+    Resp:
+        - inform Hanabi game about card played
+        - inform Hanabi game about discarded card
+        - inform Hanabi game about info given
+        - inform Hanabi game about cards drawn
+        - initialize hanabi game
+    Collab:
+        Hanabi game
+        ServerComm
+        
+- ServerComm
+    Resp:
+        - send message to start game and relay if game made to hanabi controller
+        - receive messages about players joined and relay to Hanabi controller
+        - receive starting hands and relay to hanabi controller
+        - is discard acceptable
+        - is give info acceptable
+        - obtain new cards drawn
+        - is the game over
+        - tell server when giving info
+        - was valid card played
+        - whose turn it is
+    collab:
+        
+        
+- AIHandler
+    - Resp: 
+        - playCard
+        - discardCard
+        - giveInfo 
+    - Collab: 
+        - Hand 
+
+
+Startup: 
+- hanabiGame 
+    Resp:
+        - hold all info about the game
+    collab:
+        - hand 
+        - player
+        - card
+        - log
+        - token
+        - containers
+        
+
+Notes: 
+- find out how to impliment the actions 
+- any other classes that the group can think of 
+- look over packages
+- look into how to overwrite pannels in swing (keep one panel and change it accordingly
+
+- 
+

@@ -1,0 +1,125 @@
+Model: 
+    Entities subpackage:
+        Class: Card
+            Fields:
+                private int: Rank
+                private String: Color
+            Methods:
+                Card(int rank, String color)
+                public getRank() returns rank
+                public getColor() returns color
+        
+        Class: Player
+            Fields:
+                Private String: Name
+                Private Hand: Player's Hand
+            Methods:
+                Player(String name, Hand hand)
+                public getName() returns name
+                public hand() returns player's hand
+                
+        Class: Log
+            Fields:
+            Methods:
+                public Log(String player, Card cardPlayed)
+            
+        Abstract Class: Container
+            Fields:
+                private int capacity
+            Methods:
+                container()
+                container(int capacity)
+                public capacity() returns capacity
+                public add(Card card)
+                public add()
+                public remove(Card card) returns card
+                public remove()
+                public clear()
+                public getCount()
+                
+            Class: Hand
+                Fields:
+                    private Card[] hand
+                Methods:
+                    Hand(int capacity)
+                    public add()
+                    public remove(Card card) returns card
+                    public getCount()
+                    
+            Class: DiscardPile
+                Fields:
+                    private ArrayedList<Card> discardPile
+                Methods:
+                    DiscardPile()
+                    public add(Card card)
+                    public clear()
+                    public getCount()
+                    
+            Class: FireworksPile
+                Fields:
+                    private ArrayedList<Card> fireworksPile
+                Methods:
+                    FireworksPile()
+                    public add(Card card)
+                    public clear()
+                    public getCount()
+                    
+            Class infoTokens
+                Fields:
+                    private int[] infoTokens
+                    
+                Methods:
+                    infoTokens(int capacity)
+                    public add()
+                    public clear()
+                    public getCount()
+
+            FuseToken:
+                feilds: 
+                    - Array<Integer> numTokens; 
+            +FuseToken(int size); (Constructor) 
+            +addToken(); 
+            +removeToken(); 
+            +getCount(); int
+            
+            LogCollection: 
+                feilds: 
+                    - ArrayedList<Log> log; 
+            +LogCollection(); (constructor) 
+            +addLog(Log log); 
+            +getLogCollection(); ArrayedList<Log>
+            +getLog(Player player); 
+            +getLog(String move); 
+
+    HanabiGame: 
+        feilds: 
+            - int numPlayers; 
+    +createLog(); 
+    +playCard(Card card); 
+    +discardCard(Card card);
+    +giveInfo(String info); 
+    +exitGame(); 
+ 
+
+Controller: 
+
+HanabiController: 
++ tellPlayedCard(Card cardPlayed);
++ tellDiscardCard(Card cardDiscarded);
++ tellInfo(JSON info);
++ tellCardsPickedUp(Card cardPickedUp);
++ initalizeGame(Array<String> hand1, Array<String> hand2, Array<String> hand3, Array<String> hand4, Array<String> hand5); 
+
+ServerComm: 
+#sendMSGtoStart(); bool
+#recivePlayersJoined(JSON msg); int
+#reciveStartingHands(JSON msg); list  
+#isDiscardedCardAcceptable(JSON msg); bool
+#isGiveInfoAcceptable(JSON msg); bool
+#ObtainNewCard(JSON msg); string
+#isGameOver(JSON msg); bool
+#giveInfo(String info); 
+#isValidCard(Card card); bool
+#curTurn(JSON msg); string
+
+

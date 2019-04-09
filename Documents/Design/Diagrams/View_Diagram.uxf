@@ -1,0 +1,55 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>570</x><y>96</y><w>160</w><h>90</h></coordinates><panel_attributes>&lt;&lt;MainMenu&gt;&gt;
+Package::View
+--
+- JButton createGameBtn
+- JButton joinGameBtn
+- JButton quitGameBtn
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>196</y><w>160</w><h>110</h></coordinates><panel_attributes>&lt;&lt;CreateGame&gt;&gt;
+Package::View
+--
+- int numberOfPlayers
+- int timeOutValue
+- JButton mainMenuBtn
+- JButton createBtn
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>316</y><w>160</w><h>120</h></coordinates><panel_attributes>&lt;&lt;JoinGame&gt;&gt;
+Package::View
+--
+- String gameID
+- String gameSecret
+- JButton joinGameBtn
+- JButton mainMenuBtn
+- JButton quitGameBtn
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>446</y><w>160</w><h>200</h></coordinates><panel_attributes>&lt;&lt;GameLobby&gt;&gt;
+Package::View
+--
+- String gameID
+- String gameSecret
+- String[] playerNames
+- int activePlayers
+- int maxPlayers
+- JButton newGameBtn
+- JButton backBtn
+- JButton startGameBtn
+- JButton removePlayerBtn
+- JButton addComputerBtn
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>816</y><w>160</w><h>90</h></coordinates><panel_attributes>&lt;&lt;GameOver&gt;&gt;
+Package::View
+--
+- JButton mainMenuBtn
+- JButton quitGameBtn
+- JLabel scoreMessage
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>366</y><w>130</w><h>30</h></coordinates><panel_attributes>JFrame
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>658</y><w>160</w><h>140</h></coordinates><panel_attributes>&lt;&lt;GameScreen&gt;&gt;
+Package::View
+--
+- int numberOfPlayers
+- int fuseTokens
+- int infoTokens
+- int score
+- JButton logBtn
+- JButton quitGame
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>426</y><w>130</w><h>40</h></coordinates><panel_attributes>&lt;&lt;BuildPanel&gt;&gt;
+Package::View</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>389</y><w>70</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>99</y><w>130</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;340;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>199</y><w>130</w><h>270</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;250;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>319</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>439</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>439</y><w>130</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>439</y><w>130</w><h>410</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;390</additional_attributes></element></diagram>

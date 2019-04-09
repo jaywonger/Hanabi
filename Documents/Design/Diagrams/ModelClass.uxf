@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>480</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Card
+Package::Model
+--
+-rank: Int
+-colour: String
+-rankKnown: Bool
+-colourKnown: Bool
+--
++getRank(): Int
++getColour(): String
++getInfo(): Bool[2]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>230</y>
+      <w>190</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Hand
+Package::Model
+--
+-cards: Card[4-5]
+-size: Int
+--
++getSize(): Int
++getCards(): Card[4-5]
++getCard(i: Int): Card
++addCard(c: Card, i: Int): void
++removeCard(i: Int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>380</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=4..5</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>230</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>DiscardPile
+Package::Model
+--
+-cards: Card[*]
+--
++getCards(): Card[*]
++addCard(c: Card): void
++clear(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>340</y>
+      <w>110</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;200.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>230</y>
+      <w>160</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>FireworksPile
+Package::Model
+--
+-cards: Card[0..5]
+-colour: String
+--
++getColour(): String
++getCards(): Card[0..5]
++addCard(c: Card): void
++clear(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>370</y>
+      <w>280</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=0..5</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;210.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>440</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Token
+Package::Model
+--
+-NumTokens: Int
+--
++getCount(): Int
++addToken(): void
++removeToken(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>530</y>
+      <w>190</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Log
+Package::Model
+--
+-actions: Action[*]
+--
++getActions(): Action[*]
++addAction(act: Action): void
++clear(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>30</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Player
+Package::Model
+--
+-hand: Hand
+--
++getHand(): Hand</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>110</y>
+      <w>40</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>20</y>
+      <w>440</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>HanabiGame
+Package::Model
+--
+-gameID: Int
+-token: String
+-numPlayers: Int
+-players: Player[0..5]
+-discardPile: DiscardPile
+-fireworks: FireworksPile[6]
+-fuseTokens: Token
+-informationTokens: Token
+-log: Log
+-playerTurn: Int
+-discardVisible: Bool
+-logVisible: Bool
+--
++enterGame(id: Int, token: String): void
++addPlayer(): void
++removePlayer(): void
++startGame(hands: String[2..5, 4..5]): void
++playCard(handIndex: Int, drawColour: String, drawRank: Int): void
++discardCard(handIndex: Int, drawColour: String, drawRank: Int): void
++giveInfo(playerIndex: Int, property: String): void
++toggleDiscardView(): void
++toggleLogView(): void
++getStateForAI(): Card[4..5], Card[0..5, 6], Card[*], Card[4..5, 1..4]
++endGame(): void
+-addActionToLog(move: String, params: String[*]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>70</y>
+      <w>520</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=0..5</panel_attributes>
+    <additional_attributes>500.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>100</y>
+      <w>400</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>130</y>
+      <w>230</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=6</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>160</y>
+      <w>120</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=2</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>450</y>
+      <w>40</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>530</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>valign=center
+HanabiController
+Package::Controller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>450</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>610</y>
+      <w>950</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;130.0;930.0;130.0;930.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>580</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>valign=center
+AIController
+Package::Controller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>580</y>
+      <w>190</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Action
+Package::Model
+--
+-actingPlayer: Int
+-moveType: String
+-moveParams: String[*]
+--
++getPlayer(): Int
++getMoveType(): String
++getMoveParams(): String[*]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>640</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>450</y>
+      <w>50</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0;30.0;150.0</additional_attributes>
+  </element>
+</diagram>
