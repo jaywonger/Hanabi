@@ -1,0 +1,18 @@
+Postmortem Thoughts
+
+-Issues
+    -Constant changing of design and requirements and communicating those changes
+    -Issues with everyone's expectations for workload
+    -Differing skillsets and compentency and splitting tasks based on our skills
+    -Robustness vs functionality, fousing on something to show and that works vs robust core with no display
+    -Very poor communication
+        -No one had the same idea of how the code was structured, even when working together on one component
+        -No consistent meetings with everyone present
+    -No way to hold anyone accountable for being late with work or doing poor work
+    -Did not have proper code reviews to spot bugs and issues in code before it was too late
+
+-Changes to Make
+    -Review our own skills and our capacity to learn new tools in order to make realistic requirements and design choices
+        -We would have realized to do a console app from the start
+    -More willingness to do work and alter it instead of being stuck in Analysis Paralysis
+    -More effort in creating meeting agendas and minutes and regularily checking them as a canonical source of info

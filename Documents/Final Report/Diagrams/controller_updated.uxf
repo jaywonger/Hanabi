@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>702</y>
+      <w>234</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>ServerComm
+Package::Controller
+--
+-serverName: String
+-serverPort: int
+-serverInput: BufferReader
+-serverOutput: PrintWriter
+socket: Socket
+--
++receiveMessage(): Map&lt;String, String&gt;
++setServerName(server: String): void
++setServerPort(port: int): void
+sendTest(message: String): void
+receiveTest(): String
+-computeHash(message: String): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>909</x>
+      <y>801</y>
+      <w>306</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>JSONParser
+Package::Controller
+--
+--
++makeJSON(name: String[*], value: String[*]): String
++parseJSON(json: String): Map&lt;String, String&gt;
+-getJsonArrayAsString(arr: JsonArray): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>837</y>
+      <w>342</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>360.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>18</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>valign=center
+&lt;&lt;Interface&gt;&gt;
+GameModifier
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>99</x>
+      <y>792</y>
+      <w>180</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ServerReceiver
+Package::Controller
+--
+-communicator: ServerComm
+-receiver: MessageReceiver
+-running: boolean
+--
++run(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>180</y>
+      <w>378</w>
+      <h>333</h>
+    </coordinates>
+    <panel_attributes>ReceiveController
+Package::Controller
+--
+-contData: ControllerData
+-sender: MessageSender
+--
+-respondToCreate(message: Map&lt;String, String&gt;): void
+-respondToExtant(message: Map&lt;String, String&gt;): void
+-respondToJoin(message: Map&lt;String, String&gt;): void
+-respondToJoinFailure(): void
+-respondToInvalid(): void
+-respondToClientPlay(message: Map&lt;String, String&gt;): void
+-respondToClientDiscard(message: Map&lt;String, String&gt;): void
+-respondToClientInform(): void
+-respondToNewPlayerCount(message: Map&lt;String, String&gt;): void
+-respondToGameStarts(message: Map&lt;String, String&gt;): void
+-respondToGameCancelled(): void
+-respondToGameEnds(): void
+-respondToYourMove(): void
+-respondToDiscarded(message: Map&lt;String, String&gt;): void
+-respondToPlayed(message: Map&lt;String, String&gt;): void
+-respondToNoticeInform(message: Map&lt;String, String&gt;): void
+-parseStartingHands(hands: String): String[][]
+-parseCardInfo(info: String): boolean[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>576</y>
+      <w>333</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+MessageReceiver
+Package::Controller
+--
+--
+respondToMessage(message: Map&lt;String, String&gt;): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>531</y>
+      <w>603</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+MessageSender
+Package::Controller
+--
+--
+connect(): void
+disconnect(): void
+startReceiving(mr: MessageReceiver): void
+sendCreate(numPlayers: int, timeout: int, force: boolean, rainbow: String, nsid: String, secret: String): void
+sendJoin(id: int, token: String, nsid: String, secret: String): void
+sendDiscard(handIndex: int): void
+sendPlay(handIndex: int, colour: String): void
+sendInfo(playerIndex: int, property: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>216</y>
+      <w>576</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>SendController
+Package::Controller
+--
+-contData: ControllerData
+-sender: MessageSender
+-pairReceiver: MessageReceiver
+--
+#getMessageReceiver(): MessageReceiver
++tellCreateGame(numPlayers: int, timeout: int, rainbowType: String, force: boolean, nsid: String): void
++tellJoinGame(gameID: int, token: String, nsid: String): void
++tellAddAI(): void
++tellPlayCard(handIndex: int, pileColour: String): void
++tellDiscardCard(handIndex: int): void
++tellGiveInfo(playerIndex: int, property: String): void
++tellToggleDiscard(): void
++tellToggleLog(): void
++tellLeaveGame(): void
+-getUserSecret(nsid: String): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>0</y>
+      <w>288</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>ControllerData
+Package::Controller
+--
+-game: GameModifier
+-gameID: int
+-token: String
+-nsid: String
+-rainbow: String
+-isAI: boolean
+-lastMoveIndex: int
+-lastPileColour: String
+-lastMoveProperty: String
+-contData: ControllerData
+--
++getInstance(): ControllerData</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>855</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>702</y>
+      <w>342</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>360.0;10.0;360.0;70.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>504</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>648</y>
+      <w>36</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>459</y>
+      <w>36</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>459</y>
+      <w>162</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;170.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>468</y>
+      <w>225</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;130.0;230.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>63</y>
+      <w>27</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>36</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>90</y>
+      <w>180</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>170.0;140.0;170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>90</y>
+      <w>135</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>297</x>
+      <y>63</y>
+      <w>207</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;170.0;80.0;170.0;300.0;210.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>819</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>18</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>valign=center
+HanabiGame
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>36</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

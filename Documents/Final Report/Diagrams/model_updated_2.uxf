@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>50</y>
+      <w>1170</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>AIPlayer
+Package::Model
+--
++getMove(handAI: Hand, playerHands: Map&lt;Integer, Hand&gt;, fireworks: List&lt;FireworksPile&gt;, discard: DiscardPile, informationTokens: Token, hasRainbows: boolean): Map&lt;String, String&gt;
+#bestMove(bestPlay: PlayAIMove, bestDiscard: DiscardAIMove, bestInfo: InfoAIMove, informationTokens: Token): Map&lt;String, String&gt;
+#bestPlay(handAI: Hand, fireworks: List&lt;Fireworks&gt;): PlayAIMove
+#bestDiscard(handAI: Hand, fireworks: List&lt;FireworksPile&gt;, discard: DiscardPile, hasRainbows: boolean): DiscardAIMove
+#bestInfo(fireworks: List&lt;FireworksPile&gt;, playerHands: Map&lt;Integer, Hand&gt;, hasRainbows: boolean): InfoAIMove
+-getFireworksHeight(fireworks: List&lt;FireworksPile&gt;): int[5-6]
+-getFireworksByColour(fireworks: List&lt;FireworksPile, card Card): int
+-totalUnknownProperties(hand: Hand): int
+-leastUnknownProperty(hand: Hand, hasRainbows: boolean): Map&lt;String, String&gt;
+-filterMovesByValue(moves: List&lt;AIMove&gt;, p: int): List&lt;AIMove&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>430</y>
+      <w>740</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+GameModifier
+Package::Model
+--
+--
+enterGame(id: int, token: String, rainbow: String): void
+updatePlayersLeft(numLeft: int): void
+startGame(hands: String[][]): void
+playCard(handIndex: int, drawColour: String, drawRank: int, pileColour: String): void
+playCard(handIndex: int, drawColour: String, drawRank: int, pileColour: String, ownColour: String, ownRank: int): void
+discardCard(handIndex: int, drawColour: String, drawRank: int): void
+discardCard(handIndex: int, drawColour: String, drawRank: int, ownColour: String, ownRank: int): void
+giveInfo(property: String, info: boolean[4-5]): void
+giveInfo(property: String, playerIndex: int): void
+getAIMove(): Map&lt;String, String&gt;
+toggleLogView(): void
+toggleDiscardView(): void
+endGame(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>330</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>HanabiGame
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>360</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>330</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Hand
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>330</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>DiscardPile
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>330</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>FireworksPile
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>330</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Token
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>950</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>330</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Card
+Package::Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
